@@ -1,0 +1,7 @@
+cat <<EOF > .gitignore
+*.log
+*.swp
+*~
+.DS_Store
+__pycache__/
+EOF
