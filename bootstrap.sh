@@ -19,7 +19,7 @@ if [ ! -d "$WORKDIR/.git" ]; then
     git clone git@github.com:catatwork217/gnome-to-xfce-rescue.git "$WORKDIR"
 else
     echo "🔄 Repo already cloned. Pulling latest updates..."
-    git pull
+    git -C "$WORKDIR" pull
 fi
 
 # 4. Ensure XFCE session is locked in
@@ -36,5 +36,3 @@ else
     echo "❌ postinstall-finalize.sh not found in repo!"
     exit 1
 fi
-
-echo "✅ Bootstrap complete. XFCE rescue toolkit installed and running!"
